@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sundarban</groupId>
+    <artifactId>sundarban-dark-trails</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+
+    <name>Sundarban Dark-Trails</name>
+    <description>Luxury Mangrove Safaris &amp; Expeditions Web Application</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <finalName>sundarban-trails</finalName>
+        <plugins>
+            <!-- Maven WAR Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+                <configuration>
+                    <!-- Tells Maven where your HTML/CSS/JS files live -->
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <!-- Allows packaging a WAR without a traditional WEB-INF/web.xml file -->
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
